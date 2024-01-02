@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- check the favicon -->
+  <title>Adima</title>
+  <link rel="icon" href="./images/favicon.png"> /
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- css link, do i need to include th scssss???????????????? -->
+  <!-- <link rel="stylesheet" href="./styles/style.scss">?? -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- javascript link -->
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <!-- header section -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="./images/logo2.png" alt="logo">
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <div id="close-menu-btn" class="fas fa-times" onclick=hideMenu()></div>
+      <a href="home.html">home</a>
+      <a href="friends.html">friends</a>
+      <a href="borrow.html">borrow</a>
+      <a href="help.html">help</a>
+    </nav>
+
+    <div class="icons">
+      <div id="account-btn" class="fas fa-user"></div>
+      <div id="menu-btn" class="fas fa-bars" onclick=showMenu() ></div>
+    </div>
+  </header>
+
+  <!-- register/login form -->
+
+  <div class="account-form">
+     
+      <div class="buttons">
+        <div class="btn login-btn">login</div>
+        <div class="btn register-btn">register</div>
+      </div>
+      <form class="login-form" action="">
+        <!-- why h3? -->
+        <h3>login form</h3>
+        <input type="email" class="box" placeholder="enter email">
+        <input type="password" class="box" placeholder="password">
+
+        <div class="flex">
+          <input type="checkbox" name="" id="remember-me">
+          <label for="remember-me">remember me</label>
+          <a href="#">forgot password?</a>
+        </div>
+        <input type="submit" value="login now" class="btn">
+
+      </form>
+
+      <form class="register-form" action=""></form>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
