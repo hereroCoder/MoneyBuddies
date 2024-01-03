@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- check the favicon -->
   <title>Adima</title>
   <link rel="icon" href="./images/favicon.png"> /
   <!-- font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- swiper css link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- css link, do i need to include th scssss???????????????? -->
   <!-- <link rel="stylesheet" href="./styles/style.scss">?? -->
   <link rel="stylesheet" href="./styles/style.css">
   <!-- javascript link -->
   <script src="./js/main.js" defer></script>
+  <!-- swiper js link -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+
+
 <body>
   <!-- header section -->
   <header class="header">
@@ -76,8 +82,186 @@
 
   </div>
 
+<!-- home -->
+<section class="hero">
+  <div class="hero-slider swiper">
+    <div class="swiper-wrapper">
+      <section class="slide swiper-slide" style="background: url(images/hero1.jpg) no-repeat ;">
+        <div class="content">
+          <h3>borrow and lend money among your small circle!</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia sunt totam.</p>
+          <a href="#" class="btn">get started</a>
+        </div>
+      </section>
+      <section class="slide swiper-slide" style="background: url(images/hero2.jpg) no-repeat ;">
+        <div class="content">
+          <h3>borrow and lend money among your small circle!</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia sunt totam.</p>
+          <a href="#" class="btn">get started</a>
+        </div>
+      </section>
+      <section class="slide swiper-slide" style="background: url(images/hero3.jpg) no-repeat ;">
+        <div class="content">
+          <h3>borrow and lend money among your small circle!</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia sunt totam.</p>
+          <a href="#" class="btn">get started</a>
+        </div>
+      </section>
+    </div>
+    <div class="swiper-pagination"></div>
+
+  </div>
+
+</section>
 
 
+<!-- countries -->
+<section class="countries">
+  <!-- why -->
+  <h1 class="heading">adima works nearly every where</h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="./images/united-kingdom.png" alt="">
+      <h3>United Kingdom</h3>
+      <p>GBP</p>
+    </div>
+    <div class="box">
+      <img src="./images/united-states.png" alt="">
+      <h3>United Kingdom</h3>
+      <p>USD</p>
+    </div>
+    <div class="box">
+      <img src="./images/botswana.png" alt="">
+      <h3>botswana</h3>
+      <p>BWP</p>
+    </div>
+    <div class="box">
+      <img src="./images/south-africa.png" alt="">
+      <h3>south africa</h3>
+      <p>ZAR</p>
+    </div>
+    <div class="box">
+      <img src="./images/switzerland.png" alt="">
+      <h3>Switzerland</h3>
+      <p>CHF</p>
+    </div>
+    <div class="box">
+      <img src="./images/namibia.png" alt="">
+      <h3>Namibia</h3>
+      <p>NAD</p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- promotion --> 
+<section class="promotion">
+  <h1 class="heading">why millions worldwide trust Adima</h1>
+  <div class="promotion-slider swiper">
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide  slide">
+        <div class="image">
+          <img src="./images/transfer.png" alt="">
+          <h3>Quick Transfers</h3>
+        </div>
+        <div class="content">
+          <h3>Quick Transfers</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia
+            sunt totam.</p>
+          <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+
+    
+
+      <div class="swiper-slide  slide">
+        <div class="image">
+          <img src="./images/secure2.png" alt="">
+          <h3>safe & secure</h3>
+        </div>
+        <div class="content">
+          <h3>safe & secure</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia
+            sunt totam.</p>
+          <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide  slide">
+        <div class="image">
+          <img src="./images/interest.png" alt="">
+          <h3>set own interest</h3>
+        </div>
+        <div class="content">
+          <h3>set own interest</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia
+            sunt totam.</p>
+          <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide  slide">
+        <div class="image">
+          <img src="./images/fees.png" alt="">
+          <h3>No hidden fees</h3>
+        </div>
+        <div class="content">
+          <h3>No hidden fees</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia
+            sunt totam.</p>
+          <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+
+     
+  <div class="swiper-slide slide">
+    <div class="image">
+      <img src="./images/reminder.png" alt="">
+      <h3>Reminders</h3>
+    </div>
+    <div class="content">
+      <h3>Reminders</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia
+        sunt totam.</p>
+      <a href="#" class="btn">read more</a>
+    </div>
+  </div>
+      
+      <div class="swiper-slide  slide">
+        <div class="image">
+          <img src="./images/currency.png" alt="">
+          <h3>best currency exchange</h3>
+        </div>
+        <div class="content">
+        <h3>best currency exchange</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia
+            sunt totam.</p>
+          <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+      <div class="swiper-slide  slide">
+        <div class="image">
+          <img src="./images/transfer.png" alt="">
+          <h3>Quick Transfers</h3>
+        </div>
+        <div class="content">
+          <h3>Quick Transfers</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, accusantium temporibus possimus officia
+            sunt totam.</p>
+          <a href="#" class="btn">read more</a>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+</section>
 
 
 

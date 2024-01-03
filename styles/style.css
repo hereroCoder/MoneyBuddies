@@ -28,6 +28,14 @@ section {
   padding: 5rem 10%;
 }
 
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -182,7 +190,7 @@ section {
 }
 .footer .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 2rem;
 }
 .footer .box-container .box .logo {
@@ -210,11 +218,11 @@ section {
 }
 .footer .box-container .box .icons .icon {
   cursor: pointer;
-  height: 4.5rem;
-  width: 4.5rem;
-  font-size: 3.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 2rem;
   text-align: center;
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
   background-color: #089C7C;
   color: #fff;
   margin-right: 1rem;
@@ -229,6 +237,131 @@ section {
   font-size: 1.5rem;
   text-transform: capitalize;
   color: #444;
+}
+
+.hero {
+  padding: 0;
+}
+.hero .slide {
+  display: flex;
+  align-items: center;
+  height: 60rem;
+  justify-content: right;
+  background-size: cover !important;
+}
+.hero .slide .content {
+  width: 50rem;
+}
+.hero .slide .content h3 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
+}
+.hero .slide .content p {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #777;
+  color: #eee;
+  padding: 1rem 0;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #089C7C;
+}
+
+.countries .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+}
+.countries .box-container .box {
+  background-color: #f0fdfa;
+  text-align: center;
+  padding: 3rem 2rem;
+  border: 0.1rem solid #089C7C;
+  cursor: pointer;
+}
+.countries .box-container .box:hover {
+  background-color: #089C7C;
+}
+.countries .box-container .box:hover h3 {
+  color: #fff;
+}
+.countries .box-container .box:hover p {
+  color: #eee;
+}
+.countries .box-container .box img {
+  height: 10rem;
+}
+.countries .box-container .box h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #444;
+  padding-top: 3rem;
+}
+.countries .box-container .box p {
+  font-size: 1rem;
+  line-height: 2;
+  color: #777;
+}
+
+.promotion {
+  overflow: hidden;
+}
+.promotion .slide {
+  text-align: center;
+  position: relative;
+  width: 30rem;
+  background-color: #f0fdfa;
+}
+.promotion .slide:hover .content {
+  bottom: 0;
+}
+.promotion .slide .image {
+  padding: 2rem;
+}
+.promotion .slide .image img {
+  height: 30rem;
+  margin-bottom: 1.5rem;
+}
+.promotion .slide .image h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.promotion .slide .content {
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  left: 0;
+  background-color: #089C7C;
+  padding: 2rem 3rem;
+}
+.promotion .slide .content h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
+}
+.promotion .slide .content p {
+  padding: 1rem 0;
+  font-size: 1rem;
+  line-height: 2;
+  color: #777;
+  color: #eee;
+}
+.promotion .slide .content .btn:hover {
+  background-color: #444;
+}
+.promotion .swiper-button-prev, .promotion .swiper-button-next {
+  color: #089C7C;
+}
+
+.card-borrow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
 }
 
 @media (max-width: 1200px) {
@@ -277,9 +410,15 @@ section {
   .header .navbar a {
     display: block;
   }
+  .hero .slide .content h3 {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .heading {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */

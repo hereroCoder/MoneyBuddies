@@ -1,3 +1,4 @@
+
 function showMenu(){
  document.querySelector('nav').style.right = '0';
  document.querySelector('nav').style.boxShadow= "0 0 0 100vw rgba(0,0,0,0.8)";
@@ -34,8 +35,46 @@ function openAccountForm(){
   document.querySelector('.account-form').style.boxShadow= "0 0 0 100vw rgba(0,0,0,0.8)";
 }
 
+//swiper
+ const swiper = new Swiper(".hero-slider", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      grabCursor:true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+      },
+    });
 
 
+    const swiper2 = new Swiper(".promotion-slider", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    grabCursor:true,
+    spaceBetween:20,
+    breakpoints: {
+        0: {
+          slidesPerView: 1,
+  
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        
+      },
 
- 
+      navigation: {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev',
+},
+
+
+  });
  
