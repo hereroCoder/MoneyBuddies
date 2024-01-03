@@ -57,6 +57,30 @@ html{
     background-color:$green;
   }
 }
+section{
+  padding:5rem 10%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top:1rem;
+  background-color: $light-green;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  border:$border;
+  color: $green;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color:$green;
+  }
+}
+
+ .logo img {
+   width: 150px;
+ }
 
 .header{
   position:sticky; //why not fixed
@@ -75,9 +99,7 @@ html{
       margin-right: auto;
     }
 
-  .logo img {
-    width: 150px;
-  }
+ 
 
   .navbar {
     position: relative;
@@ -123,12 +145,12 @@ html{
     }
 
 }
-
+//account form
 .account-form{
   position:fixed;
-  right:0;
+  right: -200%;
   top:0;
-  width: 25rem;
+  width: 35rem;
   height: 100%;
   background-color: $white;
   display: flex;
@@ -137,10 +159,137 @@ html{
   align-items: center;
   gap:2rem;
   z-index:1200;
+  padding: 2rem;
+  text-align: center;
+
+  
+  #close-form{
+    position: absolute; 
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 4rem;
+    color: $black;
+    cursor: pointer;
+  
+    &:hover {
+      transform: rotate(90deg);
+    }
+
+  }
+  form{
+
+    border:$border;
+    padding:2rem;
+    display: none;
+    h3{
+      @include titleText(2.5rem);
+      padding-bottom:0.5rem;
+      text-transform: uppercase;
+
+    }
+    .box{
+      width:100%;
+      padding:1.2rem 1.4rem;
+      font-size: 1.6rem;
+      margin:0.7rem 0;
+      border:$border;
+    }
+    .flex{
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      gap:0.5rem;
+      label{
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: $light-color;
+      }
+      a{
+        color:$light-color;
+        font-size: 1.5rem;
+        margin-left:auto;
+
+        &:hover{
+          text-decoration: underline;
+          color: $green;
+        }
+      }
+    }
+    .btn{
+      width:100%;
+    }
+   
+  }
+  .buttons .btn{
+    margin:0 0.5rem;
+    &.active{
+      background-color: $white;
+    }
+  }
 
 }
 
 
+
+//footer
+.footer{
+  background-color: $light-green;
+  padding: 5rem 10%;
+  .box-container{
+    @include grid(25rem);
+    
+    // padding:1rem 0;
+    // display: flex;
+    // justify-content: space-around;
+
+    .box {
+      .logo {
+        padding-bottom:0.7rem; 
+      }
+      
+        h3{
+          @include titleText(2.2rem);
+          padding:1rem 0;
+        }
+
+        a{
+          @include graphText(1.5rem);
+          padding:0.5rem 0;
+          display:block;
+      
+          &:hover{
+            color:$green;
+            text-decoration: underline;
+          }
+        }
+        .icons{
+          display:inline-block;
+          
+          .icon{
+            cursor: pointer;
+            height:4.5rem;
+            width: 4.5rem;
+            font-size: 3.5rem;
+            text-align: center;
+            padding-top: 0.5rem;
+            background-color: $green;
+            color: $white;
+            margin-right: 1rem;
+            &:hover{
+              background-color:$black ;
+             
+            }
+          }
+        }
+      }
+  }
+  .credit{
+    text-align: center;
+    margin-top:3rem;
+    padding-top: 3rem;
+    @include titleText(1.5rem)
+  }
+}
 
 
 
@@ -203,6 +352,10 @@ html{
   .header{
     padding:2rem 5%;
   }
+  section,.foooter{
+    padding: 3rem 5%; 
+  }
+  
  
   
 }
@@ -211,12 +364,17 @@ html{
   html{
     font-size: 55%;
   }
+  .logo img {
+    width: 100px;
+  }
   .header {
     padding: 2rem;
-  .logo img {
-      width: 100px;
-    }
+ 
   }
+     section,
+     .foooter {
+       padding: 3rem 2rem;
+     }
 
 }
 
@@ -229,10 +387,10 @@ html{
     .navbar {
       position: fixed;
       top:0;
-      right:-100%;
+      right:-200%;
       display: flex;
       gap:2rem;
-      width:25rem;
+      width:30rem;
       background-color:$white;
       flex-direction: column;
       height:100%; //vs 100vh??

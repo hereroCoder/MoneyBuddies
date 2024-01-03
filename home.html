@@ -31,7 +31,7 @@
     </nav>
 
     <div class="icons">
-      <div id="account-btn" class="fas fa-user"></div>
+      <div id="account-btn" class="fas fa-user" onclick=openAccountForm()></div>
       <div id="menu-btn" class="fas fa-bars" onclick=showMenu() ></div>
     </div>
   </header>
@@ -39,27 +39,40 @@
   <!-- register/login form -->
 
   <div class="account-form">
+    <div id="close-form" class="fas fa-times" onclick=closeAccountForm()>
+    </div>
      
       <div class="buttons">
         <div class="btn login-btn">login</div>
         <div class="btn register-btn">register</div>
       </div>
+
       <form class="login-form" action="">
         <!-- why h3? -->
         <h3>login form</h3>
         <input type="email" class="box" placeholder="enter email">
-        <input type="password" class="box" placeholder="password">
+        <input type="password" class="box" placeholder="enter password">
 
         <div class="flex">
           <input type="checkbox" name="" id="remember-me">
           <label for="remember-me">remember me</label>
+         
           <a href="#">forgot password?</a>
         </div>
         <input type="submit" value="login now" class="btn">
-
       </form>
 
-      <form class="register-form" action=""></form>
+
+
+      <form class="register-form" action="">
+        <!-- why h3? -->
+        <h3>register form</h3>
+        <input type="email" class="box" placeholder="enter email">
+        <input type="password" class="box" placeholder="create password">
+        <input type="password" class="box" placeholder="confirm password">
+        <input type="submit" value="register now" class="btn">
+      </form>
+      
 
   </div>
 
@@ -80,9 +93,70 @@
 
 
 
+<!-- footer -->
 
+<footer class="footer">
+    
+    <div class="box-container">
 
+      <div class="box">
+        <div class="logo">
+          <img src='./images/logo2.png' alt="logo" class='logo' />
+        </div>
+        <a href="#">About Us</a>
+        <a href="#">Affiliates</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Cookie Preferences</a>
+      </div>
 
+      <div class="box">
+        <h3 className='font-semibold pb-1 text-lg'>Legal Information</h3>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Compliance</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Legal Notice</a>
+      </div>
+
+      <div class="box">
+        <h3 className='font-semibold pb-1 text-lg'>Support</h3>
+        <a href="#">Help Center</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Fraud Aware</a>
+        <a href="#">Report Fraud</a>
+        <a href="#">Cookie Preferences</a>
+      </div>
+
+      <div class="box">
+        <h3>Follow us on</h3>
+        <div class="icons">
+          <div class="icon fa-brands fa-facebook"></div>
+          <div class="icon fa-brands fa-twitter"></div>
+          <div class="icon fa-brands fa-linkedin"></div>
+          <div class="icon fa-brands fa-youtube"></div>
+        </div>
+        
+        <h3>Get app</h3>
+        <div class="icons">
+          <div class="icon fab fa-google-play"></div>
+          <div class="icon fab fa-app-store"></div>
+        </div>
+       
+      </div>
+  
+
+      </div>
+     
+
+    </div>
+     
+    
+  <div class='credit'>
+    All rights reserved | Adima | WameChibamo.2023
+  </div>
+
+</footer>
 
 </body>
 </html>
