@@ -28,6 +28,17 @@ section {
   padding: 5rem 10%;
 }
 
+.heading-link {
+  text-align: center;
+  background: rgb(240, 253, 250);
+  background: radial-gradient(circle, rgb(240, 253, 250) 0%, rgb(238, 238, 238) 100%);
+}
+.heading-link h3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
 .heading {
   text-align: center;
   margin-bottom: 3rem;
@@ -358,10 +369,39 @@ section {
   color: #089C7C;
 }
 
-.card-borrow {
+.friends .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
+  row-gap: 5rem;
+  text-align: center;
+}
+.friends .box-container .box {
+  border: 0.1rem solid #089C7C;
+}
+.friends .box-container .box img {
+  width: 50%;
+  border-radius: 50%;
+  padding: 1rem 0;
+}
+
+.borrow .box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+.borrow .box img {
+  height: 15rem;
+}
+.borrow .box .btn {
+  height: 5rem;
+}
+.borrow .box p {
+  font-size: 2rem;
+  line-height: 2;
+  color: #777;
 }
 
 @media (max-width: 1200px) {
@@ -412,6 +452,12 @@ section {
   }
   .hero .slide .content h3 {
     font-size: 3rem;
+  }
+  .borrow .box {
+    width: 20rem;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem 0;
   }
 }
 @media (max-width: 450px) {

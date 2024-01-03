@@ -60,6 +60,16 @@ html{
 section{
   padding:5rem 10%;
 }
+
+.heading-link{
+  text-align: center;
+  background: rgb(240, 253, 250);
+  background: radial-gradient(circle, rgba(240, 253, 250, 1) 0%, rgba(238, 238, 238, 1) 100%);
+  h3{
+    @include titleText(4rem)
+  }
+
+}
 .heading{
   text-align: center;
   margin-bottom:3rem;
@@ -227,6 +237,7 @@ section{
   }
   .buttons .btn{
     margin:0 0.5rem;
+    
     &.active{
       background-color: $white;
     }
@@ -422,9 +433,51 @@ section{
   
 }
 
+//friends
+.friends{
+  .box-container{
+    @include grid(30rem);
+    row-gap: 5rem;
+
+
+    // why does it center everything even images
+    text-align: center;
+
+    .box{
+      border: $border;
+
+      img {
+          width:50%;
+          border-radius: 50%;
+          padding:1rem 0;
+        }
+
+    }
+
+    
+  }
+ 
+}
+
 //borrow
-.card-borrow{
-  @include grid(10rem);
+.borrow{
+  .box{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-shadow: $box-shadow;
+    justify-content:space-between;
+    img{
+      height:15rem;
+    }
+    .btn{
+      height: 5rem;
+    }
+    p{
+      @include graphText(2rem)
+    }
+  }
+ 
 }
 
 
@@ -544,6 +597,17 @@ section{
     font-size:3rem ;
 
   }
+
+  .borrow{
+    
+    .box {
+    width:20rem;
+    flex-direction: column;
+    margin: auto;
+    padding:1rem 0;
+    // box-shadow: none;
+  }
+}
 
 }
 

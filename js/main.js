@@ -10,6 +10,8 @@ function hideMenu(){
 
 let registerBtn = document.querySelector('.account-form .register-btn');
 let loginBtn = document.querySelector('.account-form .login-btn');
+// let personalBtn = document.querySelector('.account-form .personal-btn');
+// let manageBtn = document.querySelector('.account-form .manage-btn');
 
 //i love this
 registerBtn.onclick = ()=>{
@@ -25,6 +27,7 @@ loginBtn.onclick = ()=>{
   document.querySelector('.register-form').style.display ='none'
   document.querySelector('.login-form').style.display ='block'
 }
+
 
 function closeAccountForm(){
   document.querySelector('.account-form').style.right = '-200%'
