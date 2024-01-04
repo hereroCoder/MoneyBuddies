@@ -439,9 +439,18 @@ section{
     @include grid(30rem);
     // why does it center everything even images
     text-align: center;
-
+    
     .box{
       box-shadow: $box-shadow;
+
+      &:hover{
+        transform: scale(1.03);
+
+      }
+      
+      &.hide{
+        display:none;
+      }
 
       .image{
         height:35rem;
@@ -454,7 +463,7 @@ section{
             object-fit: cover;
           }
           h3{
-            @include titleText(1.5rem);
+            @include titleText(2rem);
             position:absolute;
             top:1rem;
             left:1.5rem;
@@ -470,7 +479,7 @@ section{
         border:$border;
 
         p{
-          @include graphText(1.5rem)
+          @include graphText(1.6rem)
         }
 
         .icons{
@@ -480,7 +489,7 @@ section{
           margin:1rem 0;
 
           span{
-            @include titleText(1rem);
+            @include titleText(1.2rem);
 
             .fa-clock{
               color:$green;
@@ -508,9 +517,16 @@ section{
 
 
     }
+    
 
     
   }
+    .load-btn {
+      margin-top:2rem;
+      text-align: center;
+
+    }
+    
  
 }
 
@@ -705,13 +721,42 @@ section{
     font-size: 3rem;
   }
      .borrow {
+      .box-container{
+        @include grid(30rem);
+        text-align: center;
+        
+
+        .box {
+            width: 30rem;
+            // text-align: center;
+            border:$border;
+            margin: auto;
+            flex-direction: column;
+            padding-bottom: 1rem;
+            // box-shadow: none;
+            .image{
+              width:100%;
+              height:30rem;
+              position: relative;
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                padding-top: 0;
+              }
+              h3{
+                position: absolute;
+                top:1.5rem;
+                left:1.5rem;
+                padding:0.5rem 1rem;
+                background: $white;
+              }
+            }
+          }
+
+      }
   
-       .box {
-        // width: 40rem;
-         flex-direction: column;
-         padding-bottom: 1rem;
-         // box-shadow: none;
-       }
+       
       }
 
 }

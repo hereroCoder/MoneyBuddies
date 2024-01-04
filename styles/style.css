@@ -378,6 +378,12 @@ section {
 .friends .box-container .box {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
+.friends .box-container .box:hover {
+  transform: scale(1.03);
+}
+.friends .box-container .box.hide {
+  display: none;
+}
 .friends .box-container .box .image {
   height: 35rem;
   overflow: hidden;
@@ -389,7 +395,7 @@ section {
   object-fit: cover;
 }
 .friends .box-container .box .image h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: capitalize;
   color: #444;
   position: absolute;
@@ -404,7 +410,7 @@ section {
   border: 0.1rem solid #089C7C;
 }
 .friends .box-container .box .content p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2;
   color: #777;
 }
@@ -415,7 +421,7 @@ section {
   margin: 1rem 0;
 }
 .friends .box-container .box .content .icons span {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   color: #444;
 }
@@ -437,6 +443,10 @@ section {
   gap: 2rem;
   margin-bottom: 1rem;
   border-bottom: 0.1rem solid #089C7C;
+}
+.friends .load-btn {
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .borrow .box-container {
@@ -530,8 +540,35 @@ section {
   .heading {
     font-size: 3rem;
   }
-  .borrow .box {
+  .borrow .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  .borrow .box-container .box {
+    width: 30rem;
+    border: 0.1rem solid #089C7C;
+    margin: auto;
     flex-direction: column;
     padding-bottom: 1rem;
+  }
+  .borrow .box-container .box .image {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+  }
+  .borrow .box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-top: 0;
+  }
+  .borrow .box-container .box .image h3 {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: #fff;
   }
 }/*# sourceMappingURL=style.css.map */

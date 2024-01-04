@@ -38,7 +38,9 @@ function openAccountForm(){
   document.querySelector('.account-form').style.boxShadow= "0 0 0 100vw rgba(0,0,0,0.8)";
 }
 
-//swiper
+
+ 
+// swiper
  const swiper = new Swiper(".hero-slider", {
       // Optional parameters
       direction: "horizontal",
@@ -80,4 +82,17 @@ function openAccountForm(){
 
 
   });
- 
+
+
+  //friends
+
+loadBtn = document.querySelector('.load-btn .btn');
+
+loadBtn.onclick = ()=>{
+  document.querySelectorAll('.friends .box-container .hide').forEach(
+    show=>{
+      show.style.display='block';
+    }
+  )
+  loadBtn.style.display="none";
+};
