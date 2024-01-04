@@ -447,7 +447,7 @@ section{
         transform: scale(1.03);
 
       }
-      
+
       &.hide{
         display:none;
       }
@@ -524,12 +524,115 @@ section{
     .load-btn {
       margin-top:2rem;
       text-align: center;
-
+     
     }
     
  
 }
 
+
+//help
+
+.help {
+
+  .icons-container{
+    @include grid(20rem);
+    margin-bottom: 2rem;
+
+    .icons{
+      text-align: center;
+      padding:3rem 2rem;
+      border: $border;
+      background: $light-green;
+
+      i{
+        background: $green;
+        color:$white;
+        width:5rem;
+        height:5rem;
+        line-height: 5rem;
+        border-radius: 50%;
+        font-size: 2rem;
+      }
+      h3{
+        @include titleText(1.5rem);
+        padding:1rem 0;
+      }
+      p{
+        @include graphText(1.5rem)
+      }
+    }
+
+  }
+
+}
+
+
+//faq
+.faq {
+ 
+  .accordion-container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:2rem;
+    align-items:flex-start;
+    
+
+    .accordion{
+      flex:1 1 100%;
+      border: $border;
+
+      &.active{
+        .accordion-heading{
+          background-color: $green;
+
+          h3{
+            color:$white
+          }
+          i{
+            color:$white;
+            transform: rotate(180deg);
+          }
+         
+        }
+        .accordion-content {
+          display: block;
+        }
+}
+
+      .accordion-heading{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:1rem;
+        cursor:pointer;
+        padding:1.5rem;
+
+        h3{
+          @include titleText(2rem)
+        }
+        i{
+          font-size: 2rem;
+          color:$green;
+        }
+        
+
+      }
+      .accordion-content{
+        padding:1.5rem;
+        @include graphText(1.5rem);
+        border-top:$border;
+        display:none;
+
+        ul,ol{
+          padding:0 2rem;
+        }
+      }
+    }
+  }
+
+  
+}
 
 
 

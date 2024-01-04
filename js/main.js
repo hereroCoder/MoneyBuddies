@@ -84,6 +84,18 @@ function openAccountForm(){
   });
 
 
+
+
+//faq
+
+accordions = document.querySelectorAll('.faq .accordion-container .accordion');
+
+accordions.forEach(accordion=>{
+  accordion.onclick= ()=>{
+    accordion.classList.toggle('active');
+  }
+});
+
   //friends
 
 loadBtn = document.querySelector('.load-btn .btn');
