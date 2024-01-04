@@ -321,15 +321,18 @@ section{
 
     .content{
       width:50rem;
+      
     
       h3{
         @include titleText(5rem);
-        color:$white;
+        color: $white;
+        
       }
       p{
-        @include graphText(1.6rem);
-        color:$light-white;
-        padding: 1rem 0;
+        @include graphText(2rem);
+        color: $white;
+        border-bottom: $border;
+        margin-bottom:1rem;
       }
     }
 

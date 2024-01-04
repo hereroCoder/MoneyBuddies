@@ -270,11 +270,12 @@ section {
   color: #fff;
 }
 .hero .slide .content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 2;
   color: #777;
-  color: #eee;
-  padding: 1rem 0;
+  color: #fff;
+  border-bottom: 0.1rem solid #089C7C;
+  margin-bottom: 1rem;
 }
 
 .swiper-pagination-bullet-active {
