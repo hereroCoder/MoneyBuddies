@@ -373,35 +373,104 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
-  row-gap: 5rem;
   text-align: center;
 }
 .friends .box-container .box {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.friends .box-container .box .image {
+  height: 35rem;
+  overflow: hidden;
+  position: relative;
+}
+.friends .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.friends .box-container .box .image h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #444;
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #fff;
+}
+.friends .box-container .box .content {
+  padding: 2rem;
+  text-align: center;
   border: 0.1rem solid #089C7C;
 }
-.friends .box-container .box img {
-  width: 50%;
-  border-radius: 50%;
-  padding: 1rem 0;
-}
-
-.borrow .box {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  justify-content: space-between;
-}
-.borrow .box img {
-  height: 15rem;
-}
-.borrow .box .btn {
-  height: 5rem;
-}
-.borrow .box p {
-  font-size: 2rem;
+.friends .box-container .box .content p {
+  font-size: 1.5rem;
   line-height: 2;
   color: #777;
+}
+.friends .box-container .box .content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+.friends .box-container .box .content .icons span {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.friends .box-container .box .content .icons span .fa-clock {
+  color: #089C7C;
+}
+.friends .box-container .box .content .icons span .fa-check {
+  color: #089C7C;
+}
+.friends .box-container .box .content .icons span .fa-bolt {
+  color: red;
+}
+.friends .box-container .box .content .icons span .fa-warning {
+  color: rgb(255, 162, 0);
+}
+.friends .box-container .box .content .money {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+  gap: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #089C7C;
+}
+
+.borrow .box-container {
+  width: 100%;
+}
+.borrow .box-container .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.borrow .box-container .box img {
+  height: 15rem;
+  padding-top: 2rem;
+}
+.borrow .box-container .box .btn {
+  height: 5rem;
+}
+.borrow .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+.borrow .box-container .box h3 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 0.5rem 0;
+}
+.borrow .box-container .box .fa-hourglass {
+  color: #089C7C;
+}
+.borrow .box-container .box .few-days {
+  color: red;
 }
 
 @media (max-width: 1200px) {
@@ -453,12 +522,6 @@ section {
   .hero .slide .content h3 {
     font-size: 3rem;
   }
-  .borrow .box {
-    width: 20rem;
-    flex-direction: column;
-    margin: auto;
-    padding: 1rem 0;
-  }
 }
 @media (max-width: 450px) {
   html {
@@ -466,5 +529,9 @@ section {
   }
   .heading {
     font-size: 3rem;
+  }
+  .borrow .box {
+    flex-direction: column;
+    padding-bottom: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

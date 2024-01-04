@@ -237,7 +237,7 @@ section{
   }
   .buttons .btn{
     margin:0 0.5rem;
-    
+
     &.active{
       background-color: $white;
     }
@@ -437,20 +437,75 @@ section{
 .friends{
   .box-container{
     @include grid(30rem);
-    row-gap: 5rem;
-
-
     // why does it center everything even images
     text-align: center;
 
     .box{
-      border: $border;
+      box-shadow: $box-shadow;
 
-      img {
-          width:50%;
-          border-radius: 50%;
-          padding:1rem 0;
+      .image{
+        height:35rem;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            height: 100%;
+            width:100%;
+            object-fit: cover;
+          }
+          h3{
+            @include titleText(1.5rem);
+            position:absolute;
+            top:1rem;
+            left:1.5rem;
+            padding:0.5rem 1.5rem;
+            background-color: $white;
+            
+          }
+
+      }
+      .content{
+        padding:2rem;
+        text-align:center;
+        border:$border;
+
+        p{
+          @include graphText(1.5rem)
         }
+
+        .icons{
+          display: flex;
+          align-items: center;
+          justify-content:space-around;
+          margin:1rem 0;
+
+          span{
+            @include titleText(1rem);
+
+            .fa-clock{
+              color:$green;
+            }
+            .fa-check{
+              color:$green;
+            }
+            .fa-bolt{
+              color:red;
+            }
+            .fa-warning{
+              color:rgb(255, 162, 0);
+            }
+          }
+        }
+
+        .money{
+          @include grid(1rem);
+          margin-bottom:1rem;
+
+          border-bottom:$border;
+  
+        }
+      }
+
 
     }
 
@@ -459,24 +514,62 @@ section{
  
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //borrow
 .borrow{
-  .box{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    box-shadow: $box-shadow;
-    justify-content:space-between;
-    img{
-      height:15rem;
-    }
-    .btn{
-      height: 5rem;
-    }
-    p{
-      @include graphText(2rem)
-    }
+  // ?????????
+  .box-container{
+    width:100%;
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow:$box-shadow;
+    
+        img {
+          height:15rem;
+          padding-top:2rem ;
+        }
+    
+        .btn {
+          height: 5rem;
+        }
+    
+        p {
+          @include graphText(1.5rem);
+        }
+
+        h3{
+          @include titleText(1.7rem);
+          padding:0.5rem 0;
+        }
+        .fa-hourglass{
+          color:$green;
+        }
+
+        .few-days{
+          color: red;
+        }
+      }
+
   }
+  
  
 }
 
@@ -598,16 +691,8 @@ section{
 
   }
 
-  .borrow{
-    
-    .box {
-    width:20rem;
-    flex-direction: column;
-    margin: auto;
-    padding:1rem 0;
-    // box-shadow: none;
-  }
-}
+ 
+
 
 }
 
@@ -619,6 +704,15 @@ section{
   .heading{
     font-size: 3rem;
   }
+     .borrow {
+  
+       .box {
+        // width: 40rem;
+         flex-direction: column;
+         padding-bottom: 1rem;
+         // box-shadow: none;
+       }
+      }
 
 }
 
