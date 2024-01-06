@@ -45,7 +45,6 @@ $box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
 html{
   font-size: 60%;
   overflow-x: hidden;
-  
 
   &::-webkit-scrollbar{
     width:1rem;
@@ -586,28 +585,51 @@ section{
 .borrow{
   // ?????????
   .box-container{
-    width:100%;
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:2rem;
     .box {
+        width:90%;
         display: flex;
         align-items: center;
+        margin: auto;
         justify-content: space-around;
-        box-shadow:$box-shadow;
+        border-bottom:$border;
+      
+        cursor: pointer;
+
+        &:hover{
+          box-shadow:$box-shadow;
+          transform: scale(1.03);
+        }
+        
     
         img {
-          height:15rem;
-          padding-top:2rem ;
+          height:20rem;
+          width:20rem;
+          object-fit: cover;
+          border-radius: 50%;
+  
         }
     
         .btn {
           height: 5rem;
+
+          &[disabled]{
+            background-color: $light-color;
+            color:$light-white;
+            border:none;
+            cursor: default;
+          }
         }
     
         p {
-          @include graphText(1.5rem);
+          @include graphText(2rem);
         }
 
         h3{
-          @include titleText(1.7rem);
+          text-align: center;
+          @include titleText(2.5rem);
           padding:0.5rem 0;
         }
         .fa-hourglass{
@@ -616,6 +638,9 @@ section{
 
         .few-days{
           color: red;
+        }
+        .money-available{
+          font-weight:600;
         }
       }
 
@@ -805,6 +830,15 @@ section{
 
   }
 
+     .borrow {
+       .box {
+         flex-direction: column;
+       }
+       .btn{
+        margin-bottom: 1.5rem;
+       }
+     }
+
  
 
 
@@ -818,6 +852,7 @@ section{
   .heading{
     font-size: 3rem;
   }
+ 
     //  .borrow {
     //   .box-container{
     //     @include grid(30rem);
@@ -855,7 +890,7 @@ section{
     //   }
   
        
-      }
+      
 
 }
 

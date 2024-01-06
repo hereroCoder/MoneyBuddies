@@ -195,61 +195,6 @@ section {
   background-color: #fff;
 }
 
-.footer {
-  background-color: #f0fdfa;
-  padding: 5rem 10%;
-}
-.footer .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2rem;
-}
-.footer .box-container .box .logo {
-  padding-bottom: 0.7rem;
-}
-.footer .box-container .box h3 {
-  font-size: 2.2rem;
-  text-transform: capitalize;
-  color: #444;
-  padding: 1rem 0;
-}
-.footer .box-container .box a {
-  font-size: 1.5rem;
-  line-height: 2;
-  color: #777;
-  padding: 0.5rem 0;
-  display: block;
-}
-.footer .box-container .box a:hover {
-  color: #089C7C;
-  text-decoration: underline;
-}
-.footer .box-container .box .icons {
-  display: inline-block;
-}
-.footer .box-container .box .icons .icon {
-  cursor: pointer;
-  height: 3.5rem;
-  width: 3.5rem;
-  font-size: 2rem;
-  text-align: center;
-  padding-top: 0.75rem;
-  background-color: #089C7C;
-  color: #fff;
-  margin-right: 1rem;
-}
-.footer .box-container .box .icons .icon:hover {
-  background-color: #444;
-}
-.footer .credit {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 3rem;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-  color: #444;
-}
-
 .hero {
   padding: 0;
 }
@@ -389,7 +334,7 @@ section {
   display: none;
 }
 .friends .box-container .box .image {
-  height: 35rem;
+  height: 30rem;
   overflow: hidden;
   position: relative;
 }
@@ -539,28 +484,46 @@ section {
 }
 
 .borrow .box-container {
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
 }
 .borrow .box-container .box {
+  width: 90%;
   display: flex;
   align-items: center;
+  margin: auto;
   justify-content: space-around;
+  border-bottom: 0.1rem solid #089C7C;
+  cursor: pointer;
+}
+.borrow .box-container .box:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transform: scale(1.03);
 }
 .borrow .box-container .box img {
-  height: 15rem;
-  padding-top: 2rem;
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .borrow .box-container .box .btn {
   height: 5rem;
 }
+.borrow .box-container .box .btn[disabled] {
+  background-color: #777;
+  color: #eee;
+  border: none;
+  cursor: default;
+}
 .borrow .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 2;
   color: #777;
 }
 .borrow .box-container .box h3 {
-  font-size: 1.7rem;
+  text-align: center;
+  font-size: 2.5rem;
   text-transform: capitalize;
   color: #444;
   padding: 0.5rem 0;
@@ -570,6 +533,64 @@ section {
 }
 .borrow .box-container .box .few-days {
   color: red;
+}
+.borrow .box-container .box .money-available {
+  font-weight: 600;
+}
+
+.footer {
+  background-color: #f0fdfa;
+  padding: 5rem 10%;
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+.footer .box-container .box .logo {
+  padding-bottom: 0.7rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  padding: 0.5rem 0;
+  display: block;
+}
+.footer .box-container .box a:hover {
+  color: #089C7C;
+  text-decoration: underline;
+}
+.footer .box-container .box .icons {
+  display: inline-block;
+}
+.footer .box-container .box .icons .icon {
+  cursor: pointer;
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 0.75rem;
+  background-color: #089C7C;
+  color: #fff;
+  margin-right: 1rem;
+}
+.footer .box-container .box .icons .icon:hover {
+  background-color: #444;
+}
+.footer .credit {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #444;
 }
 
 @media (max-width: 1200px) {
@@ -621,6 +642,12 @@ section {
   .hero .slide .content h3 {
     font-size: 3rem;
   }
+  .borrow .box {
+    flex-direction: column;
+  }
+  .borrow .btn {
+    margin-bottom: 1.5rem;
+  }
 }
 @media (max-width: 480px) {
   html {
@@ -628,36 +655,5 @@ section {
   }
   .heading {
     font-size: 3rem;
-  }
-  .borrow .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
-    text-align: center;
-  }
-  .borrow .box-container .box {
-    width: 30rem;
-    border: 0.1rem solid #089C7C;
-    margin: auto;
-    flex-direction: column;
-    padding-bottom: 1rem;
-  }
-  .borrow .box-container .box .image {
-    width: 100%;
-    height: 30rem;
-    position: relative;
-  }
-  .borrow .box-container .box .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding-top: 0;
-  }
-  .borrow .box-container .box .image h3 {
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    padding: 0.5rem 1rem;
-    background: #fff;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -96,6 +96,18 @@ accordions.forEach(accordion=>{
   }
 });
 
+
+//borrow
+document.querySelectorAll('.request-btn').forEach(Btn=>{
+  Btn.onclick=()=>{
+    alert('Request successfully sent to your friend');
+    Btn.disabled=true;
+    Btn.innerHTML = 'requested';
+
+  }
+});
+
+
   //friends
 
 loadBtn = document.querySelector('.load-btn .btn');
