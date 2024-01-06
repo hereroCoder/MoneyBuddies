@@ -1,10 +1,10 @@
-
-function showMenu(){
+//toggle menu
+function openMenu(){
  document.querySelector('nav').style.right = '0';
  document.querySelector('nav').style.boxShadow= "0 0 0 100vw rgba(0,0,0,0.8)";
 }
 
-function hideMenu(){
+function closeMenu(){
  document.querySelector('nav').style.right = '-200%';
 };
 
@@ -24,8 +24,8 @@ registerBtn.onclick = ()=>{
 loginBtn.onclick = ()=>{
   registerBtn.classList.remove('active')
   loginBtn.classList.add('active')
-  document.querySelector('.register-form').style.display ='none'
-  document.querySelector('.login-form').style.display ='block'
+  document.querySelector('.register-form').style.display ='none';
+  document.querySelector('.login-form').style.display ='block';
 }
 
 

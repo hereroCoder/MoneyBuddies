@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 *{
+  margin: 0;
+  padding: 0;
   font-family:'Lato',sans-serif;
-  margin:0;
-  padding:0;
   box-sizing: border-box;
   outline: none;
   border:none;
   text-decoration: none;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 }
 
 
-// change all units to px
 $green:#089C7C;
 $light-green:#f0fdfa;
 $light-color:#777;
@@ -22,41 +21,44 @@ $white:#fff;
 $border:0.1rem solid $green;
 $box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
 
-//what is mixin? css function?
-@mixin grid($val){
+
+@mixin grid($minsize){
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax($val,1fr));
+  grid-template-columns: repeat(auto-fit, minmax($minsize,1fr));
   gap:2rem;
 }
 
 //title
-@mixin titleText($titleSize){
-  font-size: $titleSize;
+@mixin titleText($font-size){
+  font-size: $font-size;
   text-transform: capitalize;
   color: $black;
 }
 
 //paragraph
-@mixin graphText($graphSize) {
-  font-size: $graphSize;
+@mixin graphText($font-size) {
+  font-size: $font-size;
   line-height: 2;
   color: $light-color;
 }
 
 html{
-  font-size: 62.5%; //change
+  font-size: 60%;
   overflow-x: hidden;
+  
 
   &::-webkit-scrollbar{
     width:1rem;
   }
+  &::-webkit-scrollbar-thumb {
+    background-color: $green;
+  }
   &::-webkit-scrollbar-track {
     background-color: transparent;
   }
-  &::-webkit-scrollbar-thumb {
-    background-color:$green;
-  }
+  
 }
+
 section{
   padding:5rem 10%;
 }
@@ -94,11 +96,12 @@ section{
 }
 
  .logo img {
-   width: 150px;
+   width: 15rem;
  }
 
+ //header
 .header{
-  position:sticky; //why not fixed
+  position:sticky;
   top:0;
   left:0;
   right:0;
@@ -107,14 +110,11 @@ section{
   padding:2rem 10%;
   display:flex;
   align-items: center;
-  // justify-content: space-between;
-  z-index:1000;
+  z-index:5;
 
   .logo {
       margin-right: auto;
     }
-
- 
 
   .navbar {
     position: relative;
@@ -160,6 +160,7 @@ section{
     }
 
 }
+
 //account form
 .account-form{
   position:fixed;
@@ -247,65 +248,7 @@ section{
 
 
 
-//footer
-.footer{
-  background-color: $light-green;
-  padding: 5rem 10%;
-  .box-container{
-    @include grid(20rem);
-    
-    // padding:1rem 0;
-    // display: flex;
-    // justify-content: space-around;
 
-    .box {
-      .logo {
-        padding-bottom:0.7rem; 
-      }
-      
-        h3{
-          @include titleText(2.2rem);
-          padding:1rem 0;
-        }
-
-        a{
-          @include graphText(1.5rem);
-          padding:0.5rem 0;
-          display:block;
-      
-          &:hover{
-            color:$green;
-            text-decoration: underline;
-          }
-        }
-        .icons{
-          display:inline-block;
-          
-          .icon{
-            cursor: pointer;
-            height:3.5rem;
-            width: 3.5rem;
-            font-size: 2rem;
-            text-align: center;
-            padding-top: 0.75rem;
-            background-color: $green;
-            color: $white;
-            margin-right: 1rem;
-            &:hover{
-              background-color:$black ;
-             
-            }
-          }
-        }
-      }
-  }
-  .credit{
-    text-align: center;
-    margin-top:3rem;
-    padding-top: 3rem;
-    @include titleText(1.5rem)
-  }
-}
 
 //home
 .hero{
@@ -315,9 +258,7 @@ section{
     align-items: center;
     height:60rem;
     justify-content: right;
-    //change
     background-size: cover !important;
-    // background-position:center !important;
 
     .content{
       width:50rem;
@@ -333,6 +274,9 @@ section{
         color: $white;
         border-bottom: $border;
         margin-bottom:1rem;
+      }
+      .btn{
+        margin-right:1rem
       }
     }
 
@@ -456,7 +400,7 @@ section{
       }
 
       .image{
-        height:35rem;
+        height:30rem;
         overflow: hidden;
         position: relative;
 
@@ -638,21 +582,6 @@ section{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //borrow
 .borrow{
   // ?????????
@@ -696,7 +625,69 @@ section{
 }
 
 
+//footer
+.footer {
+  background-color: $light-green;
+  padding: 5rem 10%;
 
+  .box-container {
+    @include grid(20rem);
+
+    // padding:1rem 0;
+    // display: flex;
+    // justify-content: space-around;
+
+    .box {
+      .logo {
+        padding-bottom: 0.7rem;
+      }
+
+      h3 {
+        @include titleText(2.2rem);
+        padding: 1rem 0;
+      }
+
+      a {
+        @include graphText(1.5rem);
+        padding: 0.5rem 0;
+        display: block;
+
+        &:hover {
+          color: $green;
+          text-decoration: underline;
+        }
+      }
+
+      .icons {
+        display: inline-block;
+
+        .icon {
+          cursor: pointer;
+          height: 3.5rem;
+          width: 3.5rem;
+          font-size: 2rem;
+          text-align: center;
+          padding-top: 0.75rem;
+          background-color: $green;
+          color: $white;
+          margin-right: 1rem;
+
+          &:hover {
+            background-color: $black ;
+
+          }
+        }
+      }
+    }
+  }
+
+  .credit {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    @include titleText(1.5rem)
+  }
+}
 
 
 
@@ -762,8 +753,9 @@ section{
  
   
 }
-//laptop??
-@media (max-width:991px){
+
+//laptop
+@media (max-width:1024px){
   html{
     font-size: 55%;
   }
@@ -781,7 +773,7 @@ section{
 
 }
 
-//tablet??
+//tablets
 @media (max-width:768px) {
   .header{
     #menu-btn {
@@ -818,49 +810,49 @@ section{
 
 }
 
-//mobile??
-@media (max-width:450px) {
+//mobile
+@media (max-width:480px) {
   html {
     font-size: 50%;
   }
   .heading{
     font-size: 3rem;
   }
-     .borrow {
-      .box-container{
-        @include grid(30rem);
-        text-align: center;
+    //  .borrow {
+    //   .box-container{
+    //     @include grid(30rem);
+    //     text-align: center;
         
 
-        .box {
-            width: 30rem;
-            // text-align: center;
-            border:$border;
-            margin: auto;
-            flex-direction: column;
-            padding-bottom: 1rem;
-            // box-shadow: none;
-            .image{
-              width:100%;
-              height:30rem;
-              position: relative;
-              img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                padding-top: 0;
-              }
-              h3{
-                position: absolute;
-                top:1.5rem;
-                left:1.5rem;
-                padding:0.5rem 1rem;
-                background: $white;
-              }
-            }
-          }
+    //     .box {
+    //         width: 30rem;
+    //         // text-align: center;
+    //         border:$border;
+    //         margin: auto;
+    //         flex-direction: column;
+    //         padding-bottom: 1rem;
+    //         // box-shadow: none;
+    //         .image{
+    //           width:100%;
+    //           height:30rem;
+    //           position: relative;
+    //           img{
+    //             width: 100%;
+    //             height: 100%;
+    //             object-fit: cover;
+    //             padding-top: 0;
+    //           }
+    //           h3{
+    //             position: absolute;
+    //             top:1.5rem;
+    //             left:1.5rem;
+    //             padding:0.5rem 1rem;
+    //             background: $white;
+    //           }
+    //         }
+    //       }
 
-      }
+    //   }
   
        
       }

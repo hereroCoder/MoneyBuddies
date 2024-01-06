@@ -31,7 +31,7 @@
     </a>
 
     <nav class="navbar" id="navbar">
-      <div id="close-menu-btn" class="fas fa-times" onclick=hideMenu()></div>
+      <div id="close-menu-btn" class="fas fa-times" onclick=closeMenu()></div>
       <a href="home.html">home</a>
       <a href="friends.html">friends</a>
       <a href="borrow.html">borrow</a>
@@ -40,7 +40,7 @@
 
     <div class="icons">
       <div id="account-btn" class="fas fa-user" onclick=openAccountForm()></div>
-      <div id="menu-btn" class="fas fa-bars" onclick=showMenu()></div>
+      <div id="menu-btn" class="fas fa-bars" onclick=openMenu()></div>
     </div>
   </header>
 
@@ -51,13 +51,13 @@
     <div id="close-form" class="fas fa-times" onclick=closeAccountForm()>
     </div>
     <div class="buttons">
-      <div class="btn login-btn">login</div>
-      <div class="btn register-btn">register</div>
+      <div class="btn login-btn">log in</div>
+      <div class="btn register-btn">sign up</div>
     </div>
     
     <form class="login-form" action="">
       <!-- why h3? -->
-      <h3>login form</h3>
+      <h3>log in form</h3>
       <input type="email" class="box" placeholder="enter email">
       <input type="password" class="box" placeholder="enter password">
     
@@ -74,7 +74,7 @@
     
     <form class="register-form" action="">
       <!-- why h3? -->
-      <h3>register form</h3>
+      <h3>sign up form</h3>
       <input type="email" class="box" placeholder="enter email">
       <input type="password" class="box" placeholder="create password">
       <input type="password" class="box" placeholder="confirm password">
