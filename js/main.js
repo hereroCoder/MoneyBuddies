@@ -127,10 +127,21 @@ if(loadBtn){
   loadBtn.onclick = ()=>{
   document.querySelectorAll('.friends .box-container .hide').forEach(
     show=>{
-      show.style.display='block';
+      if(show.style.display=='block'){
+           show.style.display='none';
+            loadBtn.innerHTML='show more';
+          
+      }
+      else{
+        show.style.display='block';
+         loadBtn.innerHTML='show less';
+       
+
+      }
+   
     }
   )
-  loadBtn.style.display="none";
+  
 };
 
 }
