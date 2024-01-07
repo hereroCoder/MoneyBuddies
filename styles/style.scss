@@ -66,7 +66,7 @@ section{
   text-align: center;
   background: rgb(240, 253, 250);
   background: radial-gradient(circle, rgba(240, 253, 250, 1) 0%, rgba(238, 238, 238, 1) 100%);
-  h3{
+  h2{
     @include titleText(4rem)
   }
 
@@ -348,7 +348,7 @@ section{
       width:50rem;
       
     
-      h3{
+      h1{
         @include titleText(5rem);
         color: $white;
         
@@ -427,7 +427,6 @@ section{
     .image {
         padding: 2rem;
         img {
-          // width: 100%;
           height:30rem;
           margin-bottom: 1.5rem;
         }
@@ -449,7 +448,7 @@ section{
         }
         p{
           padding:1rem 0;
-          @include graphText(1rem);
+          @include graphText(1.5rem);
           color:$light-white
         }
         .btn:hover{
@@ -469,7 +468,6 @@ section{
 .friends{
   .box-container{
     @include grid(30rem);
-    // why does it center everything even images
     text-align: center;
     
     .box{
@@ -673,7 +671,6 @@ section{
 
 //borrow
 .borrow{
-  // ?????????
   .box-container{
     display:grid;
     grid-template-columns: repeat(1,1fr);
@@ -856,7 +853,6 @@ section{
 // media queries
 
 
-//desktop
 @media (max-width:1200px) {
   .header{
     padding:2rem 5%;
@@ -869,7 +865,7 @@ section{
   
 }
 
-//laptop
+
 @media (max-width:1024px){
   html{
     font-size: 55%;
@@ -888,7 +884,7 @@ section{
 
 }
 
-//tablets
+
 @media (max-width:768px) {
   .header{
     #menu-btn {
@@ -903,7 +899,7 @@ section{
       width:30rem;
       background-color:$white;
       flex-direction: column;
-      height:100%; //vs 100vh??
+      height:100%; 
       padding:10rem;
       z-index: 1200;
       #close-menu-btn{
@@ -934,7 +930,7 @@ section{
 
 }
 
-//mobile
+
 @media (max-width:480px) {
   html {
     font-size: 50%;
@@ -942,42 +938,6 @@ section{
   .heading{
     font-size: 3rem;
   }
- 
-    //  .borrow {
-    //   .box-container{
-    //     @include grid(30rem);
-    //     text-align: center;
-        
-
-    //     .box {
-    //         width: 30rem;
-    //         // text-align: center;
-    //         border:$border;
-    //         margin: auto;
-    //         flex-direction: column;
-    //         padding-bottom: 1rem;
-    //         // box-shadow: none;
-    //         .image{
-    //           width:100%;
-    //           height:30rem;
-    //           position: relative;
-    //           img{
-    //             width: 100%;
-    //             height: 100%;
-    //             object-fit: cover;
-    //             padding-top: 0;
-    //           }
-    //           h3{
-    //             position: absolute;
-    //             top:1.5rem;
-    //             left:1.5rem;
-    //             padding:0.5rem 1rem;
-    //             background: $white;
-    //           }
-    //         }
-    //       }
-
-    //   }
   
        
       

@@ -33,7 +33,7 @@ section {
   background: rgb(240, 253, 250);
   background: radial-gradient(circle, rgb(240, 253, 250) 0%, rgb(238, 238, 238) 100%);
 }
-.heading-link h3 {
+.heading-link h2 {
   font-size: 4rem;
   text-transform: capitalize;
   color: #444;
@@ -279,7 +279,7 @@ section {
 .hero .slide .content {
   width: 50rem;
 }
-.hero .slide .content h3 {
+.hero .slide .content h1 {
   font-size: 5rem;
   text-transform: capitalize;
   color: #444;
@@ -377,7 +377,7 @@ section {
 }
 .promotion .slide .content p {
   padding: 1rem 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 2;
   color: #777;
   color: #eee;

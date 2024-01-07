@@ -45,7 +45,6 @@ function openAccountForm(){
  
 // swiper
  const swiper = new Swiper(".hero-slider", {
-      // Optional parameters
       direction: "horizontal",
       loop: true,
       grabCursor:true,
@@ -59,7 +58,7 @@ function openAccountForm(){
 
 
     const swiper2 = new Swiper(".promotion-slider", {
-    // Optional parameters
+  
     direction: "horizontal",
     loop: true,
     grabCursor:true,
