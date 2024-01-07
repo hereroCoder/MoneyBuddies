@@ -134,7 +134,7 @@ section {
   z-index: 1200;
   padding: 4rem 2rem;
   text-align: center;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 .account-form::-webkit-scrollbar {
@@ -195,11 +195,13 @@ section {
 }
 .account-form .profile {
   width: 60%;
+  margin-top: 15rem;
   max-width: 60rem;
+  min-width: 30rem;
 }
 .account-form .profile .profile-img {
   position: relative;
-  margin-bottom: 2rem;
+  margin: 2rem;
   width: 20rem;
 }
 .account-form .profile .profile-img img {

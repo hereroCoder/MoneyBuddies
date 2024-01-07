@@ -11,20 +11,26 @@ function closeMenu(){
 let registerBtn = document.querySelector('.account-form .register-btn');
 let loginBtn = document.querySelector('.account-form .login-btn');
 
-
-registerBtn.onclick = ()=>{
+if (registerBtn){
+  registerBtn.onclick = ()=>{
   registerBtn.classList.add('active')
   loginBtn.classList.remove('active')
   document.querySelector('.register-form').style.display ='block'
   document.querySelector('.login-form').style.display ='none'
 }
 
-loginBtn.onclick = ()=>{
+}
+
+if (loginBtn){
+
+  loginBtn.onclick = ()=>{
   registerBtn.classList.remove('active')
   loginBtn.classList.add('active')
   document.querySelector('.register-form').style.display ='none';
   document.querySelector('.login-form').style.display ='block';
 }
+}
+
 
 
 function closeAccountForm(){
@@ -89,16 +95,20 @@ function  moreinfo(){
 //faq
 
 accordions = document.querySelectorAll('.faq .accordion-container .accordion');
-
-accordions.forEach(accordion=>{
+if (accordions){
+  accordions.forEach(accordion=>{
   accordion.onclick= ()=>{
-    accordion.classList.toggle('active');
+  accordion.classList.toggle('active');
   }
 });
 
+}
+
+
 
 //borrow
-document.querySelectorAll('.request-btn').forEach(Btn=>{
+if(document.querySelectorAll('.request-btn')){
+  document.querySelectorAll('.request-btn').forEach(Btn=>{
   Btn.onclick=()=>{
     alert('Request successfully sent to your friend');
     Btn.disabled=true;
@@ -107,12 +117,15 @@ document.querySelectorAll('.request-btn').forEach(Btn=>{
   }
 });
 
+}
 
-  //friends
 
+
+//friends
 loadBtn = document.querySelector('.load-btn .btn');
 
-loadBtn.onclick = ()=>{
+if(loadBtn){
+  loadBtn.onclick = ()=>{
   document.querySelectorAll('.friends .box-container .hide').forEach(
     show=>{
       show.style.display='block';
@@ -120,3 +133,5 @@ loadBtn.onclick = ()=>{
   )
   loadBtn.style.display="none";
 };
+
+}
