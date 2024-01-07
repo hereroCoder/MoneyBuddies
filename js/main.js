@@ -10,10 +10,8 @@ function closeMenu(){
 
 let registerBtn = document.querySelector('.account-form .register-btn');
 let loginBtn = document.querySelector('.account-form .login-btn');
-// let personalBtn = document.querySelector('.account-form .personal-btn');
-// let manageBtn = document.querySelector('.account-form .manage-btn');
 
-//i love this
+
 registerBtn.onclick = ()=>{
   registerBtn.classList.add('active')
   loginBtn.classList.remove('active')
@@ -35,7 +33,6 @@ function closeAccountForm(){
 
 function openAccountForm(){
   document.querySelector('.account-form').style.right = '0';
-  document.querySelector('.account-form').style.boxShadow= "0 0 0 100vw rgba(0,0,0,0.8)";
 }
 
 
@@ -85,6 +82,9 @@ function openAccountForm(){
 
 
 
+function  moreinfo(){
+  alert('Additional information page not available at the moment. Contact customer service for enquiries');
+};
 
 //faq
 

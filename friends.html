@@ -47,69 +47,82 @@
   <!-- register/login form -->
 
   <div class="account-form">
+    <div id="close-form" class="fas fa-times" onclick=closeAccountForm()></div>
+        <div class="profile">
+          <div class="profile-img">
+            <img src="./images/joey.jpg" alt="">
+            <i class="fa fa-camera"></i>
+          </div>
+          <div class="profile-text">
 
-    <div id="close-form" class="fas fa-times" onclick=closeAccountForm()>
-    </div>
-    <div class="buttons">
-      <div class="btn login-btn">log in</div>
-      <div class="btn register-btn">sign up</div>
-    </div>
-    
-    <form class="login-form" action="">
-      <!-- why h3? -->
-      <h3>log in form</h3>
-      <input type="email" class="box" placeholder="enter email">
-      <input type="password" class="box" placeholder="enter password">
-    
-      <div class="flex">
-        <input type="checkbox" name="" id="remember-me">
-        <label for="remember-me">remember me</label>
-    
-        <a href="#">forgot password?</a>
-      </div>
-      <input type="submit" value="login now" class="btn">
-    </form>
-    
-    
-    
-    <form class="register-form" action="">
-      <!-- why h3? -->
-      <h3>sign up form</h3>
-      <input type="email" class="box" placeholder="enter email">
-      <input type="password" class="box" placeholder="create password">
-      <input type="password" class="box" placeholder="confirm password">
-      <input type="submit" value="register now" class="btn">
-    </form>
+            <div class="profile-box">
+              <div>
+                <p>name</p>
+                <h3>Garrett Lastname</h3>
+              </div>
+              
+              <p>verified</p>
+            </div>
 
+            <div class="profile-box">
+              <div>
+                <p>phone</p>
+                <h3>+44 1234 567809</h3>
+              </div>
+              
+              <i class="fa fa-angle-right"></i>
+            </div>
 
-    <!-- <div class="buttons">
-      <div class="btn personal-btn">Personal details</div>
-      <div class="btn manage-btn">Manage account</div>
-    </div>
-    
-    <form class="personal-info" action="">
-      <img src="./images/joey.jpg" alt="" width="100px">
-      <h3>Personal details</h3>
-      <div>
-        <p>Name:Garrett</p>
-        <p>Phone: +44 1234 567809</p>
-        <p>Email: friends@gmail.com</p>
-        <p>Billing address: 123st George st...</p>
-        <p>Payment method: card ending 9088</p>
-      </div>
-    </form>
+            <div class="profile-box">
+              <div>
+                <p>email</p>
+                <h3>friends@gmail.com</h3>
+              </div>
+             
+              <i class="fa fa-angle-right"></i>
+            </div>
 
-    <form class="manage-account" action="">
-      <h3>Manage Account</h3>
-      <div>
-        <p>pay dues</p>
-        <p>add friend</p>
-        <p>post amount</p>
-        <p>delete friend</p>
-        <p>close account</p>
-       
-      </div>
-    </form> -->
+            <div class="profile-box">
+              <div>
+                <p>Billing address</p>
+                <h3>Central Perk coffee shop, NY, USA</h3>
+              </div>
+              
+              <i class="fa fa-angle-right"></i>
+            </div>
+
+            <div class="profile-box">
+              <div>
+                <p>phone</p>
+                <h3>+44 1234 567809</h3>
+
+              </div>
+          
+              <i class="fa fa-angle-right"></i>
+            </div>
+
+            <div class="profile-box">
+              <div>
+                <p>payment settings</p>
+                  <h3><i class="fab fa-cc-visa"></i> card ending 1234</h3>
+              </div>
+            
+              <button>Add another</button>
+            </div>
+          
+
+           
+          
+           
+          </div>
+
+          <a href="#">close my account</a>
+        </div>
+      
+
+      
+      
+  
 
     
   </div>
