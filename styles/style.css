@@ -213,9 +213,9 @@ section {
 .account-form .profile .profile-img i {
   position: absolute;
   bottom: 1rem;
-  right: 2rem;
+  right: 1rem;
   font-size: 3rem;
-  color: #444;
+  color: #089C7C;
   cursor: pointer;
 }
 .account-form .profile .profile-text .profile-box {
@@ -420,8 +420,7 @@ section {
   text-transform: capitalize;
   color: #444;
   position: absolute;
-  top: 1rem;
-  left: 1.5rem;
+  bottom: 1rem;
   padding: 0.5rem 1.5rem;
   background-color: #fff;
 }
