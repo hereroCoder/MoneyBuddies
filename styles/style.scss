@@ -762,6 +762,7 @@ section{
         @include graphText(1.5rem);
         padding: 0.5rem 0;
         display: block;
+        pointer-events: none;
 
         &:hover {
           color: $green;
